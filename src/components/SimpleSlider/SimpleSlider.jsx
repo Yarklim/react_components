@@ -24,10 +24,18 @@ const SimpleSlider = () => {
 
   return (
     <section className={s.sliderContainer}>
-      {/* {imagesData?.map(({ id, image, alt }) => (
-        <img className={s.imgSlider} key={id} src={image} alt={alt} />
-      ))} */}
-      <img className={s.imgSlider} src={imagesData[imgIndex].image} alt="pic" />
+      <div className={s.imagesWrapper}>
+        {imagesData?.map(({ id, image, alt }) => (
+          <img
+            className={s.imgSlider}
+            key={id}
+            src={image}
+            alt={alt}
+            style={{ translate: `${-100 * imgIndex}%` }}
+          />
+        ))}
+      </div>
+      {/* <img className={s.imgSlider} src={imagesData[imgIndex].image} alt="pic" /> */}
       <button
         className={s.sliderArrowBtn}
         style={{ left: 0 }}
