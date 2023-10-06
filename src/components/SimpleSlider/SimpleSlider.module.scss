@@ -1,0 +1,55 @@
+// ============= Global styles =============
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+
+  width: 100%;
+}
+
+button {
+  all: unset;
+}
+
+// ============= Slider styles ==============
+.sliderContainer {
+  width: 100%;
+  height: auto;
+
+  position: relative;
+}
+
+.imgSlider {
+  //   height: 50%;
+  object-fit: cover;
+}
+
+.sliderArrowBtn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  padding: 1rem;
+
+  cursor: pointer;
+
+  z-index: 100;
+
+  transition: background-color 100ms ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.sliderArrowBtn > * {
+  width: 2rem;
+  height: 2rem;
+
+  stroke: white;
+  fill: black;
+}

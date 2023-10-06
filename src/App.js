@@ -1,7 +1,11 @@
+import SimpleSlider from './components/SimpleSlider/SimpleSlider';
+import './App.css';
+
 function App() {
   return (
-    <div>
-      <h1>React Components</h1>
+    <div className="app">
+      {/* <h1>React Components</h1> */}
+      <SimpleSlider />
     </div>
   );
 }
