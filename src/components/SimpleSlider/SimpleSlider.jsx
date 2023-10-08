@@ -26,15 +26,16 @@ const SimpleSlider = () => {
   };
 
   return (
-    <section className={s.sliderContainer}>
+    <section className={s.sliderContainer} aria-label="Image Slider">
       {/* Images */}
       <div className={s.imagesWrapper}>
-        {imagesData?.map(({ id, image, alt }) => (
+        {imagesData?.map(({ id, image, alt }, index) => (
           <img
             className={s.imgSlider}
             key={id}
             src={image}
             alt={alt}
+            aria-hidden={imgIndex !== index}
             style={{ translate: `${-100 * imgIndex}%` }}
           />
         ))}
@@ -45,15 +46,17 @@ const SimpleSlider = () => {
         className={s.navigateArrowBtn}
         style={{ left: 0 }}
         onClick={showPrevImage}
+        aria-label="View Previous Image"
       >
-        <ArrowBackIosNewIcon />
+        <ArrowBackIosNewIcon aria-hidden />
       </button>
       <button
         className={s.navigateArrowBtn}
         style={{ right: 0 }}
         onClick={showNextImage}
+        aria-label="View Next Image"
       >
-        <ArrowForwardIosIcon />
+        <ArrowForwardIosIcon aria-hidden />
       </button>
 
       {/* Navigation Dots */}
@@ -63,6 +66,7 @@ const SimpleSlider = () => {
             className={s.navigateDot}
             key={index}
             onClick={() => setImgIndex(index)}
+            aria-label={`View Previous Image ${index + 1}`}
           >
             {/* Dots style*/}
             {/* {index === imgIndex ? (
@@ -73,9 +77,9 @@ const SimpleSlider = () => {
 
             {/* Lines style */}
             {index === imgIndex ? (
-              <div className={s.dotChecked}></div>
+              <div className={s.dotChecked} aria-hidden></div>
             ) : (
-              <div className={s.dotUnchecked}></div>
+              <div className={s.dotUnchecked} aria-hidden></div>
             )}
           </button>
         ))}
