@@ -41,7 +41,7 @@ button {
   transition: translate 300ms ease-in-out;
 }
 
-.sliderArrowBtn {
+.navigateArrowBtn {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -57,12 +57,90 @@ button {
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
   }
+
+  &:hover > * {
+    animation: squish 300ms ease-in-out;
+  }
 }
 
-.sliderArrowBtn > * {
+@keyframes squish {
+  50% {
+    scale: 1.4 0.7;
+  }
+}
+
+.navigateArrowBtn > * {
   width: 2rem;
   height: 2rem;
 
   stroke: white;
   fill: black;
+}
+
+// Dots styles
+// .navigateDotsWrapper {
+//   position: absolute;
+//   bottom: 0.5rem;
+//   left: 50%;
+//   translate: -50%;
+
+//   display: flex;
+//   gap: 0.25rem;
+// }
+
+// .navigateDot > * {
+//   width: 1rem;
+//   height: 1rem;
+
+//   stroke: white;
+//   fill: black;
+// }
+
+// .navigateDot {
+//   cursor: pointer;
+
+//   transition: scale 100ms ease-in-out;
+
+//   &:hover {
+//     scale: 1.2;
+//   }
+// }
+
+// Lines styles
+.navigateDotsWrapper {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  translate: -50%;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navigateDot {
+  cursor: pointer;
+
+  transition: scale 100ms ease-in-out;
+
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+.dotChecked {
+  width: 2rem;
+  height: 0.3rem;
+
+  border: 1px solid #ffffffa6;
+  border-radius: 20%;
+  background-color: #dadadab7;
+}
+
+.dotUnchecked {
+  width: 2rem;
+  height: 0.25rem;
+
+  border: 1px solid #ffffffa6;
+  border-radius: 20%;
+  background-color: #6d6d6db7;
 }
