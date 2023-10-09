@@ -8,6 +8,7 @@
 	* useResize  
 	* useTheme  
 	* useToggle  
+	* useCount  
 - Components:  
 	* Simple Slider  
 	* Drag & Drop files 
