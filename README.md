@@ -2,9 +2,11 @@
 ## What is inside:
 - Custom hooks:  
 	* useHover  
+	* useFetch  
 	* useInput  
 	* useLocalStorage  
 	* useOnClickOutside  
+	* useQueryParams  
 	* useResize  
 	* useTheme  
 	* useToggle  

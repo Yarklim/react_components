@@ -80,44 +80,22 @@ button {
 }
 
 // Dots styles
-// .navigateDotsWrapper {
-//   position: absolute;
-//   bottom: 0.5rem;
-//   left: 50%;
-//   translate: -50%;
-
-//   display: flex;
-//   gap: 0.25rem;
-// }
-
-// .navigateDot > * {
-//   width: 1rem;
-//   height: 1rem;
-
-//   stroke: white;
-//   fill: black;
-// }
-
-// .navigateDot {
-//   cursor: pointer;
-
-//   transition: scale 100ms ease-in-out;
-
-//   &:hover,
-//	 &:focus-visible {
-//     scale: 1.2;
-//   }
-// }
-
-// Lines styles
 .navigateDotsWrapper {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   left: 50%;
   translate: -50%;
 
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
+}
+
+.navigateDot > * {
+  width: 1rem;
+  height: 1rem;
+
+  stroke: white;
+  fill: black;
 }
 
 .navigateDot {
@@ -131,25 +109,47 @@ button {
   }
 }
 
-.dotChecked {
-  width: 2rem;
-  height: 0.3rem;
+// Lines styles
+// .navigateDotsWrapper {
+//   position: absolute;
+//   bottom: 1rem;
+//   left: 50%;
+//   translate: -50%;
 
-  border: 1px solid #ffffffa6;
-  border-radius: 20%;
-  background-color: #dadadab7;
-}
+//   display: flex;
+//   gap: 0.5rem;
+// }
 
-.dotUnchecked {
-  width: 2rem;
-  height: 0.25rem;
+// .navigateDot {
+//   cursor: pointer;
 
-  border: 1px solid #ffffffa6;
-  border-radius: 20%;
-  background-color: #6d6d6db7;
-}
+//   transition: scale 100ms ease-in-out;
 
-.navigateDotsWrapper:focus-visible,
-.navigateDot:focus-visible {
-  outline: auto;
-}
+//   &:hover,
+//   &:focus-visible {
+//     scale: 1.2;
+//   }
+// }
+
+// .dotChecked {
+//   width: 2rem;
+//   height: 0.3rem;
+
+//   border: 1px solid #ffffffa6;
+//   border-radius: 20%;
+//   background-color: #dadadab7;
+// }
+
+// .dotUnchecked {
+//   width: 2rem;
+//   height: 0.25rem;
+
+//   border: 1px solid #ffffffa6;
+//   border-radius: 20%;
+//   background-color: #6d6d6db7;
+// }
+
+// .navigateDotsWrapper:focus-visible,
+// .navigateDot:focus-visible {
+//   outline: auto;
+// }

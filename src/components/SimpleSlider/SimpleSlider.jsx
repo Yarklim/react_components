@@ -3,8 +3,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import s from './SimpleSlider.module.scss';
 // Icons for Dots style
-// import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-// import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 
 import { imagesData } from '../../data/imagesData';
 
@@ -69,18 +69,18 @@ const SimpleSlider = () => {
             aria-label={`View Previous Image ${index + 1}`}
           >
             {/* Dots style*/}
-            {/* {index === imgIndex ? (
+            {index === imgIndex ? (
               <RadioButtonCheckedIcon />
             ) : (
               <RadioButtonUncheckedIcon />
-            )} */}
+            )}
 
             {/* Lines style */}
-            {index === imgIndex ? (
+            {/* {index === imgIndex ? (
               <div className={s.dotChecked} aria-hidden></div>
             ) : (
               <div className={s.dotUnchecked} aria-hidden></div>
-            )}
+            )} */}
           </button>
         ))}
       </div>
