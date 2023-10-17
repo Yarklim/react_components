@@ -2,6 +2,7 @@
 ## What is inside:
 - Custom hooks:  
 	* useCount  
+	* useDebounce  
 	* useFetch  
 	* useHover  
 	* useInfiniteScroll  
