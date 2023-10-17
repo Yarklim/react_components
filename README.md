@@ -1,8 +1,10 @@
 # React Components
 ## What is inside:
 - Custom hooks:  
-	* useHover  
+	* useCount  
 	* useFetch  
+	* useHover  
+	* useInfiniteScroll  
 	* useInput  
 	* useLocalStorage  
 	* useOnClickOutside  
@@ -10,7 +12,6 @@
 	* useResize  
 	* useTheme  
 	* useToggle  
-	* useCount  
 - Components:  
 	* Simple Slider  
 	* Drag & Drop files 
