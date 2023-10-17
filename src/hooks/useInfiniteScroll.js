@@ -15,10 +15,11 @@ const useInfiniteScroll = (parentRef, childRef, callback) => {
       }
     }, options);
 
-    observer.current.observe(childRef.current);
+    const childrenRef = childRef.current;
+    observer.current.observe(childrenRef);
 
     return () => {
-      observer.current.unobserve(childRef.current);
+      observer.current.unobserve(childrenRef);
     };
   }, [callback, childRef, parentRef]);
 };
